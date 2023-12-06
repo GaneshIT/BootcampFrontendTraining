@@ -1,0 +1,118 @@
+Div tag - is a container tag.
+            which contains all the child tags
+
+HTML5 Important Topics:
+    1. html DOCTYPE
+    2. html advance controls
+    3. html semantic elements
+    4. web storage
+    5. Location service
+    6. Html web workers
+
+HTML5 sematic elements
+
+
+    <div>
+    <h1>
+
+    <table>
+    <header></header>
+    <footer></footer>
+    <aside></aside>
+    <article></article>
+    <section></section>
+
+
+CSS: 
+
+1. inline css
+2. internal css
+3. external css
+
+
+HTML Form Tag:
+        it will have all input controls
+
+    Form method: 
+    1. POST - Submitting form to server
+    2. GET - Retrieveing data from server
+
+css 3 rules:
+
+1.   Dot
+2.   #
+3.   Tagname
+
+Bootstrap CSS:
+        RWD- Responsive Web Design
+
+Steps: 
+1. Meta tag- ViewPort 
+2. Meta tag - utf-8
+3. load Bootstrap css file
+4. Container layout
+
+Grid System:
+    Row -> should have 12 column size
+    Grid breakpoints: xs,sm,md,lg,xl
+
+
+    for(int i=0;i<4;i++>)
+    {
+        print(i);
+    }
+    
+      3,4,5,2
+
+        1. init  2. condi  3.incr/decr
+
+        4
+
+How to display child window?
+    ->Bootstrap Modal dialog window
+
+
+
+Javascript:
+    ->it is client side scripting language,
+    ->To validate client side form and apply events or triggers
+      in the web page to make dynamic
+
+    1. data types, variables
+    2. local and global scope
+    3. functions
+    4. arrays
+    5. array methods- slice,splice,join,concat,includes
+    6. hoisting
+    7. map(), filter() methods and difference
+    8. bind(),call(), apply() methods
+    9. javascript classes and objects
+    10. javascript prototype
+
+map() function
+Syntax:
+array.map(callbackfunction);
+
+Example
+var array=[1,2,4,10]; 
+array.map(function(obj,k){
+    console.log(array[k]);
+    console.log(obj,k);
+})
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+

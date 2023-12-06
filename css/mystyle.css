@@ -1,0 +1,33 @@
+.menustyle{
+    display: inline-block;
+    color:aqua
+}
+ul{
+    list-style-type: none;
+}
+header{
+    height: 100px;
+    background-color: rgb(3, 117, 117);
+}
+footer{
+    height: 30px;
+    background-color: rgb(7, 174, 174);
+}
+section{
+    height: 300px;
+}
+.ulStyle{
+    margin:0;
+    padding-top: 8%;   
+}
+.divstyle{
+    float: left;
+    width: 25%;   
+}
+body{
+    margin:0;padding: 0;
+}
+table{
+    border: 1px solid red;
+    color: aqua;
+}

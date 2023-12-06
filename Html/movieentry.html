@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="mydemo">
+        </div>
+        <h1>Movie Entry</h1>
+        <h2 id="displaydate"></h2>
+        <hr />
+        <div style="float: left;width: 50%;">
+        <form>
+            <table border="1px" cellpadding="5px">
+                <tr>
+                    <td><label>Movie Id</label></td>
+                    <td><input type="text" value="" id="txtmovieid" /></td>
+                </tr>
+                <tr>
+                    <td><label>Movie Title</label></td>
+                    <td><input type="text" value="" id="txttitle" /></td>
+                </tr>
+                <tr>
+                    <td><label>Movie Desc</label></td>
+                    <td><input type="text" value="" id="txtdesc" /></td>
+                </tr>
+                <tr>
+                    <td><label>Movie Type</label></td>
+                    <td><select id="ddltype">
+                        <option>Select</option>
+                        <option>Action</option>
+                        <option>Comedy</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" value="Save" onclick="validate()" />
+                        <input type="button" value="Reset" />
+                    </td>
+                </tr>
+            </table>            
+            
+        </form>
+        </div>
+        <div style="float: left;width: 50%;">
+            <h2>Movie List</h2>
+            <hr />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Desc</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="movielist">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            <div class="row" id="moviedata">
+
+            </div>
+        </div>
+    <script type="text/javascript">
+        document.getElementById('mydemo').innerHTML='<h1>Test</h1>';
+        var pIdArr=[1,2,3,4,5];
+        var pTitleArr=["M1","M2","M3","M4","M5"];
+        var pPriceArr=[100,2000,3000,4000,5000];
+        function loadProductList(){
+            var data="";
+            for(let i=0;i<pIdArr.length;i++)
+            {
+                //data=data+"";
+                //logic
+            }
+            //document.getElementById('').innerHTML=data;
+        }
+        loadProductList();
+        // var moviename="ABC";
+        // console.log("Hai, welcome");
+        // document.write(moviename);
+        //How to access DOM?-> window.document
+        //how to create function?
+        //how to declare array
+        var idArr=[];//push()
+        var titleArr=[];
+        var descArr=[]
+        var typeArr=[];
+
+        function validate(){
+         var id=document.getElementById('txtmovieid').value;
+         var title=document.getElementById('txttitle').value;
+         var desc=document.getElementById('txtdesc').value;
+         var type=document.getElementById('ddltype').value;
+         //document.write("You have entered movie id:"+id);
+         addMovie(id,title,desc,type);//calling
+        }
+        
+        function addMovie(id,title,desc,type){
+            idArr.push(id);
+            titleArr.push(title);
+            descArr.push(desc);
+            typeArr.push(type);
+            loadAll();
+        }
+
+        function loadAll(){
+            var data="";
+            // for(let i=0;i<idArr.length;i++){
+            //     data=data+"<tr><td>"+idArr[i]+"</td><td>"+titleArr[i]+"</td><td>"+descArr[i]+"</td><td>"+typeArr[i]+"</td></tr>";
+            // }
+
+            //map(); 
+            //inbuild function, 
+            //iterate automatically and callback 
+            //till end of the item in the array
+            var cardData=""
+            idArr.map((obj,i)=>{
+                data=data+"<tr><td>"+idArr[i]+"</td><td>"+titleArr[i]+"</td><td>"+descArr[i]+"</td><td>"+typeArr[i]+"</td></tr>";      
+                // cardData=cardData+"<div class='col-md-4'><div class='card'><div class='card-header'>"+idArr[i]+"</div></div></div>";
+                cardData=cardData+"<div class='col-md-4'><div class='card'><div class='card-header'>"+titleArr[i]+"</div><div class='card-body'>body</div><div><button class='btn btn-primary'>Book</button></div></div></div>"
+            });
+            document.getElementById('movielist').innerHTML=data;
+            document.getElementById('moviedata').innerHTML=cardData;
+        }
+        
+        
+        //what is callback function?
+        //function will trigger automatically by timer setup
+        //1.setTimeout(), 2.setInterval()
+        setInterval(function(){
+        var date=new Date();//inbuild Date type
+        document.getElementById('displaydate').innerText=date.toLocaleTimeString();
+        },1000)
+
+    </script>
+    </body>
+</html>
