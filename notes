@@ -100,9 +100,8 @@ array.map(function(obj,k){
     console.log(obj,k);
 })
 
+Javascript Promise() constructor
 
-
-        
 
         
 
