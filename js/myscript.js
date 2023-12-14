@@ -75,7 +75,54 @@ console.log(items);
 // document.write(items.splice(3,1,"samsung","S2"))
 
 
-Javascript
+/*
+Javascript promise object
+-> its a special object. it will handle 
+   asynchrnous task and make ensure completed
+   or not
+
+ Promise 3 States:
+    1.Pending
+    2.Fulfilled
+    3.Rejected
+
+*/
+//how to create promise?
+function checkEligible(){
+var promiseObj=new Promise(function(resolve,reject){
+    let age=document.getElementById('ddlage').value;
+    if(age>18)
+        resolve("eligible!!!")
+    else
+        reject("Not eliigble");
+})
+console.log(promiseObj);
+//how to access promise result?
+promiseObj.then(function(result){
+document.getElementById('myMsg').innerHTML="<b style='color:green'>"+result+"</b>";
+}).catch(function(err){
+    document.getElementById('myMsg').innerHTML="<b style='color:red'>"+err+"</b>";
+})
+
+}
+
+// function Test1(){
+//     console.log('test1')
+// }
+// function Test2(){
+//     console.log('test2')
+// }
+// Test1(); Test2();
+
+console.log("I");
+// This will be shown after 2 seconds
+setTimeout(()=>{
+    console.log("eat");
+  },2000)
+console.log("Ice Cream")
+
+
+
 
 
 

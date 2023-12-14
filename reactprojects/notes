@@ -1,0 +1,86 @@
+React Js
+
+*Its JS library
+*Virtual DOM support
+*Component based architecture
+*Reusable compoents
+*Easy to maintain
+*Unidirectional way
+*state management
+*Its UI Layer
+
+F1.html original
+<div>
+    <h1>Welcome to training</h1>
+</div>
+React
+F1.html virtaul
+<div>
+    <h1>Welcome to training</h1>
+</div>
+
+
+steps to create project
+
+1. How to setup react project
+->npm install -g create-react-app
+
+npm->command
+install->command name
+-g -> global
+create-react-app -> react library template
+
+2. How to create react project?
+->npx create-react-app projectname
+
+projectname should be small letters
+example: npx create-react-app movieapp
+
+3. how to run/execute react project?
+-> npm start
+
+4. how to stop running?
+-> ctrl+c
+
+
+React Components:
+1. Functional componet
+    ->stateless
+    ->resuable
+    ->easy to maintain
+2. Class component
+    ->statefull 
+    ->render in the UI directly
+
+React props & state:
+1. props
+    ->pass data between components
+    ->its read only. cannot modfiy value
+2. state
+    ->can access inside class component only
+    ->can modify state value by using setState() function
+
+how to implement bootstrap into react?
+
+    npm install bootstrap@4.6.0
+
+
+React Routing? 
+    ->To create single page application
+
+    npm install react-router-dom
+
+    Routing setup:
+    1. BrowserRouter
+        its a component. it will handle browser url address
+    2. Link 
+        its a component. it will create URL address.
+    3. Routes
+        its a component. it will manage all the Route URL's
+    4. Route
+        its a component. it will create a route to map with Link URL address 
+
+
+
+
+
