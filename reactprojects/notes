@@ -80,7 +80,14 @@ React Routing?
     4. Route
         its a component. it will create a route to map with Link URL address 
 
+How to create fake RestAPI:
+    1. npm install -g json-server
+    2. create json file
+    3. how to run json server
+        ->npx json-server --watch jsonfilename
+npx json-server --watch moviedb.json  
 
+API url: localhost:3000/movies
 
 
 
