@@ -1,0 +1,36 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "abc",
+      "desc": "test",
+      "type": "action"
+    },
+    {
+      "title": "xyz",
+      "desc": "test",
+      "type": "comedy",
+      "id": 2
+    },
+    {
+      "title": "test1",
+      "desc": "test2",
+      "type": "actoin",
+      "id": 3
+    },
+    {
+      "title": "j",
+      "desc": "j",
+      "type": "j",
+      "id": 4
+    },
+    {
+      "title": "ak",
+      "desc": "k",
+      "type": "k",
+      "id": 5
+    }
+  ],
+  "bookings": [],
+  "users": []
+}

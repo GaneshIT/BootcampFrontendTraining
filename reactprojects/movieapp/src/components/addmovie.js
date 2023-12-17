@@ -1,6 +1,6 @@
 //class component
 import React from "react";
-
+import MovieList from "./movielist";
 class AddMovie extends React.Component{
     constructor(){
         super();
@@ -9,11 +9,14 @@ class AddMovie extends React.Component{
             movieId:0,
             movieTitle:'',
             movieDesc:'',
-            movieType:''
+            movieType:'',
+            moviedata:[]
         }
         this.readTitle=this.readTitle.bind(this);
         this.readDesc=this.readDesc.bind(this);
         this.readType=this.readType.bind(this);
+        this.addMovie=this.addMovie.bind(this);
+        this.getMovies=this.getMovies.bind(this);
     }
     readTitle(e){
         this.setState({movieTitle:e.target.value})
@@ -25,7 +28,40 @@ class AddMovie extends React.Component{
         this.setState({movieType:e.target.value});
        // this.shouldComponentUpdate(false)
     }
+    addMovie(){
+        var data={
+            "title":this.state.movieTitle,
+            "desc":this.state.movieDesc,
+            "type":this.state.movieType
+        }
+        console.log(data);
+        fetch("http://localhost:3001/movies",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(data)
+        }).then(
+            (response)=>{
+                alert('Inserted');
+                this.getMovies();
+             }
+        ).catch(
+            (error)=>alert(error)
+        )
+
+    }
+    getMovies(){
+        fetch("http://localhost:3001/movies").then(
+            (response)=>response.json()
+        ).then(
+            (result)=>this.setState({moviedata:result})
+        ).catch(
+            (err)=>alert(err)
+        )
+    }
     componentDidMount(){
+        this.getMovies();
     }
     render(){
         return(
@@ -45,14 +81,12 @@ class AddMovie extends React.Component{
                         <label>Type</label>
                         <input type="text" value={this.state.movieType} onChange={this.readType} />
                     </div>
-                    <input type="button" value="Save" />
+                    <input type="button" value="Save" onClick={this.addMovie} />
                     <input type="button" value="Reset" />
                 </form>
-                <div>
-                    {this.state.movieTitle+","+
-                    this.state.movieDesc+","+
-                    this.state.movieType}
-                </div>
+                <hr />
+                    <h2>Movie List</h2>
+                    <MovieList data={this.state.moviedata}></MovieList>
                 <hr />
             </div>
         );

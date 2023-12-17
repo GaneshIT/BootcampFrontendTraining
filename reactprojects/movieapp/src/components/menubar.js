@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, Route, Routes } from 'react-router-dom';
+import AddMovie from './addmovie';
 import Events from './events';
 import Home from './home';
-import MovieList from './movielist';
 function Menubar(props){
     return(
         <div>
@@ -32,7 +32,8 @@ function Menubar(props){
             </nav>
             <Routes>
                 <Route path="/" element={<Home />}></Route>
-                <Route path="/movies" element={<MovieList />}></Route>
+                <Route path="/movies" element={<AddMovie
+                 />}></Route>
                 <Route path="/events" element={<Events />}></Route>
             </Routes>
         </div>

@@ -1,4 +1,4 @@
-function MovieList(){
+function MovieList(props){
     return(
         <table>
             <thead>
@@ -9,11 +9,11 @@ function MovieList(){
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>ABC</td>
-                    <td>Test</td>
-                </tr>
+                {props.data.map((obj)=>
+                <tr><td>{obj.id}</td>
+                <td>{obj.title}</td>
+                <td>{obj.desc}</td></tr>
+                )}
             </tbody>
         </table>
         );
