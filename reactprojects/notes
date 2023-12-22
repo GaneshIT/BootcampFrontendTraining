@@ -90,4 +90,58 @@ npx json-server --watch moviedb.json
 API url: localhost:3000/movies
 
 
+React Hooks: Only Functional component
+   -> How to make functional component into statefull component.
+   -> How to track side effects of functional component
+
+1. useState()
+2. useEffect()
+3. useContext()
+4. useMemo()
+5. useReducer()  
+ 
+ React HOC?
+
+ -> A HOC is a function that takes a component and returns a new component
+ -> Reusing a component logic
+ -> HOC converts a component into another component.
+
+Conditional Rendering?
+    - return/render component if else condition
+
+Controlled  &  Uncontrolled Components?
+Controlled:
+->In a controlled component, the value of the input element is controlled by React
+
+uncontrolled:
+->In an uncontrolled component, the value of the input element is handled by the DOM itself. 
+
+
+
+class Events extends React.Component{
+    constructor(){
+//state init, method bind
+    }
+    componentDidMount(){
+
+    }
+    render(){
+        return(<></>);
+    }
+}
+
+export default function AddEvent(){
+    //useState,UseEffect
+    return()
+}
+
+
+React Redux?
+    ->implement global state management
+    ->global store
+    ->can have only one global store for every react app
+
+
+
+
 
