@@ -31,6 +31,21 @@
       "id": 5
     }
   ],
-  "bookings": [],
-  "users": []
+  "location": [
+    {
+      "state": "TN",
+      "location": "Chennai",
+      "id": 1
+    },
+    {
+      "state": "KA",
+      "location": "bangalore",
+      "id": 2
+    },
+    {
+      "state": "MA",
+      "location": "Pune",
+      "id": 3
+    }
+  ]
 }
